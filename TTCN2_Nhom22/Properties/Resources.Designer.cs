@@ -173,6 +173,16 @@ namespace TTCN2_Nhom22.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash_icon {
+            get {
+                object obj = ResourceManager.GetObject("cash-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Checklist_icon {
             get {
                 object obj = ResourceManager.GetObject("Checklist-icon", resourceCulture);
@@ -206,6 +216,16 @@ namespace TTCN2_Nhom22.Properties {
         internal static System.Drawing.Bitmap Customer_service_icon {
             get {
                 object obj = ResourceManager.GetObject("Customer-service-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Customer_service_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Customer-service-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace TTCN2_Nhom22.Properties {
         internal static System.Drawing.Bitmap Pencil_icon {
             get {
                 object obj = ResourceManager.GetObject("Pencil-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pencil_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Pencil-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

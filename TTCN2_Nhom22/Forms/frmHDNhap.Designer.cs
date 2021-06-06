@@ -587,7 +587,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.grbCTHD);
             this.Controls.Add(this.grbTTHD);
             this.Name = "frmHDNhap";
-            this.Text = "Hóa đơn nhập";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmHDNhap_Load);
             this.grbTTHD.ResumeLayout(false);
             this.grbTTHD.PerformLayout();

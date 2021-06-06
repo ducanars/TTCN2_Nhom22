@@ -61,17 +61,17 @@ namespace TTCN2_Nhom22.Forms
             this.txtMaHDXuat = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.grbCTHD = new System.Windows.Forms.GroupBox();
+            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.lblBangchu = new System.Windows.Forms.Label();
             this.txtSoluong = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtTongtien = new System.Windows.Forms.TextBox();
-            this.lblBangchu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grbTTHD.SuspendLayout();
             this.grbCTHD.SuspendLayout();
@@ -456,6 +456,15 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.TabStop = false;
             this.grbCTHD.Text = "Chi tiết hóa đơn";
             // 
+            // txtTongtien
+            // 
+            this.txtTongtien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTongtien.Location = new System.Drawing.Point(172, 482);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTongtien.Size = new System.Drawing.Size(233, 30);
+            this.txtTongtien.TabIndex = 133;
+            // 
             // txtTenSP
             // 
             this.txtTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -464,6 +473,17 @@ namespace TTCN2_Nhom22.Forms
             this.txtTenSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTenSP.Size = new System.Drawing.Size(233, 30);
             this.txtTenSP.TabIndex = 133;
+            // 
+            // lblBangchu
+            // 
+            this.lblBangchu.AutoSize = true;
+            this.lblBangchu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBangchu.ForeColor = System.Drawing.Color.Navy;
+            this.lblBangchu.Location = new System.Drawing.Point(439, 486);
+            this.lblBangchu.Name = "lblBangchu";
+            this.lblBangchu.Size = new System.Drawing.Size(100, 22);
+            this.lblBangchu.TabIndex = 132;
+            this.lblBangchu.Text = "Bằng chữ : ";
             // 
             // txtSoluong
             // 
@@ -475,6 +495,17 @@ namespace TTCN2_Nhom22.Forms
             this.txtSoluong.TabIndex = 133;
             this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
             this.txtSoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoluong_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.Navy;
+            this.label16.Location = new System.Drawing.Point(60, 486);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 22);
+            this.label16.TabIndex = 132;
+            this.label16.Text = "Tổng tiền";
             // 
             // label12
             // 
@@ -542,37 +573,6 @@ namespace TTCN2_Nhom22.Forms
             this.label8.TabIndex = 132;
             this.label8.Text = "Mã sản phẩm";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(60, 486);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 22);
-            this.label16.TabIndex = 132;
-            this.label16.Text = "Tổng tiền";
-            // 
-            // txtTongtien
-            // 
-            this.txtTongtien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTongtien.Location = new System.Drawing.Point(172, 482);
-            this.txtTongtien.Name = "txtTongtien";
-            this.txtTongtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTongtien.Size = new System.Drawing.Size(233, 30);
-            this.txtTongtien.TabIndex = 133;
-            // 
-            // lblBangchu
-            // 
-            this.lblBangchu.AutoSize = true;
-            this.lblBangchu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblBangchu.ForeColor = System.Drawing.Color.Navy;
-            this.lblBangchu.Location = new System.Drawing.Point(439, 486);
-            this.lblBangchu.Name = "lblBangchu";
-            this.lblBangchu.Size = new System.Drawing.Size(100, 22);
-            this.lblBangchu.TabIndex = 132;
-            this.lblBangchu.Text = "Bằng chữ : ";
-            // 
             // frmHDXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -590,7 +590,7 @@ namespace TTCN2_Nhom22.Forms
             this.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmHDXuat";
-            this.Text = "Hóa đơn xuất";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmHDXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grbTTHD.ResumeLayout(false);

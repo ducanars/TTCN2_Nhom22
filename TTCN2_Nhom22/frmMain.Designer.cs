@@ -45,6 +45,7 @@ namespace TTCN2_Nhom22
             this.tìmKiếmHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoHàngTồnKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +176,8 @@ namespace TTCN2_Nhom22
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.báoCáoHàngTồnKhoToolStripMenuItem});
+            this.báoCáoHàngTồnKhoToolStripMenuItem,
+            this.báoCáoDoanhThuToolStripMenuItem});
             this.báoCáoToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.list_icon;
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
             this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(127, 29);
@@ -188,6 +190,14 @@ namespace TTCN2_Nhom22
             this.báoCáoHàngTồnKhoToolStripMenuItem.Size = new System.Drawing.Size(317, 30);
             this.báoCáoHàngTồnKhoToolStripMenuItem.Text = "Báo cáo hàng tồn kho";
             this.báoCáoHàngTồnKhoToolStripMenuItem.Click += new System.EventHandler(this.báoCáoHàngTồnKhoToolStripMenuItem_Click);
+            // 
+            // báoCáoDoanhThuToolStripMenuItem
+            // 
+            this.báoCáoDoanhThuToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.cash_icon;
+            this.báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
+            this.báoCáoDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(317, 30);
+            this.báoCáoDoanhThuToolStripMenuItem.Text = "Báo cáo doanh thu";
+            this.báoCáoDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.báoCáoDoanhThuToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
@@ -237,5 +247,6 @@ namespace TTCN2_Nhom22
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoHàngTồnKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
     }
 }

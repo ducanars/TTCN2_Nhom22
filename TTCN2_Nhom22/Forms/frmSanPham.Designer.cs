@@ -434,7 +434,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Name = "frmSanPham";
-            this.Text = "Vật tư";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -41,9 +41,9 @@ namespace TTCN2_Nhom22.Forms
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTenCV = new System.Windows.Forms.TextBox();
             this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTenCV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,14 +187,6 @@ namespace TTCN2_Nhom22.Forms
             this.dataGridView1.TabIndex = 116;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtTenCV
-            // 
-            this.txtTenCV.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenCV.Location = new System.Drawing.Point(195, 193);
-            this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(278, 38);
-            this.txtTenCV.TabIndex = 103;
-            // 
             // MaCV
             // 
             this.MaCV.DataPropertyName = "MaCV";
@@ -210,6 +202,14 @@ namespace TTCN2_Nhom22.Forms
             this.TenCV.MinimumWidth = 6;
             this.TenCV.Name = "TenCV";
             this.TenCV.Width = 220;
+            // 
+            // txtTenCV
+            // 
+            this.txtTenCV.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTenCV.Location = new System.Drawing.Point(195, 193);
+            this.txtTenCV.Name = "txtTenCV";
+            this.txtTenCV.Size = new System.Drawing.Size(278, 38);
+            this.txtTenCV.TabIndex = 103;
             // 
             // frmChucvu
             // 
@@ -230,7 +230,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Name = "frmChucvu";
-            this.Text = "frmChucvu";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmChucvu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

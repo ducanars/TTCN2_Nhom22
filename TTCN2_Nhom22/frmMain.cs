@@ -90,5 +90,12 @@ namespace TTCN2_Nhom22
             f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
+
+        private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.frmBaoCaoDT f = new Forms.frmBaoCaoDT();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
     }
 }

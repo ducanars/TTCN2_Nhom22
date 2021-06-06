@@ -147,7 +147,7 @@ namespace TTCN2_Nhom22.Forms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(878, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(878, 290);
             this.dataGridView1.TabIndex = 2;
             // 
             // frmTimKiemThongTin
@@ -159,7 +159,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTimKiemThongTin";
-            this.Text = "frmTimKiemThongTin";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmTimKiemThongTin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -330,7 +330,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNhaCC";
-            this.Text = "Nhà cung cấp";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmNhaCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

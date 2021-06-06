@@ -31,7 +31,9 @@ namespace TTCN2_Nhom22.Forms
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdoHDX = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtNam = new System.Windows.Forms.TextBox();
             this.rdoHDN = new System.Windows.Forms.RadioButton();
             this.btnDong = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@ namespace TTCN2_Nhom22.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,17 @@ namespace TTCN2_Nhom22.Forms
             this.rdoHDX.Text = "Hóa đơn xuất";
             this.rdoHDX.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(417, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 22);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "Tên nhân viên";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -103,6 +114,16 @@ namespace TTCN2_Nhom22.Forms
             this.label1.Size = new System.Drawing.Size(47, 22);
             this.label1.TabIndex = 125;
             this.label1.Text = "Năm";
+            // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTenNV.Location = new System.Drawing.Point(571, 196);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTenNV.Size = new System.Drawing.Size(259, 30);
+            this.txtTenNV.TabIndex = 115;
+            this.txtTenNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNam_KeyPress);
             // 
             // txtNam
             // 
@@ -275,27 +296,6 @@ namespace TTCN2_Nhom22.Forms
             this.dataGridView1.Size = new System.Drawing.Size(1079, 340);
             this.dataGridView1.TabIndex = 3;
             // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenNV.Location = new System.Drawing.Point(571, 196);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenNV.Size = new System.Drawing.Size(259, 30);
-            this.txtTenNV.TabIndex = 115;
-            this.txtTenNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNam_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(417, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 22);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "Tên nhân viên";
-            // 
             // frmTimKiemHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -305,7 +305,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTimKiemHD";
-            this.Text = "frmTimKiemHD";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmTimKiemHD_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -56,7 +56,7 @@ namespace TTCN2_Nhom22.Forms
             this.btnDong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnDong.Image = global::TTCN2_Nhom22.Properties.Resources.Button_Close_icon;
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(462, 51);
+            this.btnDong.Location = new System.Drawing.Point(712, 22);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(113, 45);
             this.btnDong.TabIndex = 141;
@@ -70,7 +70,7 @@ namespace TTCN2_Nhom22.Forms
             this.btnInbaocao.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnInbaocao.Image = global::TTCN2_Nhom22.Properties.Resources.print_icon;
             this.btnInbaocao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInbaocao.Location = new System.Drawing.Point(214, 51);
+            this.btnInbaocao.Location = new System.Drawing.Point(464, 22);
             this.btnInbaocao.Name = "btnInbaocao";
             this.btnInbaocao.Size = new System.Drawing.Size(199, 45);
             this.btnInbaocao.TabIndex = 140;
@@ -84,7 +84,7 @@ namespace TTCN2_Nhom22.Forms
             this.btnLammoi.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnLammoi.Image = global::TTCN2_Nhom22.Properties.Resources.Button_Refresh_icon__1_;
             this.btnLammoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLammoi.Location = new System.Drawing.Point(46, 51);
+            this.btnLammoi.Location = new System.Drawing.Point(296, 22);
             this.btnLammoi.Name = "btnLammoi";
             this.btnLammoi.Size = new System.Drawing.Size(133, 45);
             this.btnLammoi.TabIndex = 139;
@@ -96,7 +96,7 @@ namespace TTCN2_Nhom22.Forms
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(163, 133);
+            this.dataGridView1.Location = new System.Drawing.Point(181, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -121,7 +121,7 @@ namespace TTCN2_Nhom22.Forms
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(93, 464);
+            this.groupBox1.Location = new System.Drawing.Point(111, 417);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(904, 181);
             this.groupBox1.TabIndex = 143;
@@ -253,14 +253,14 @@ namespace TTCN2_Nhom22.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1119, 689);
+            this.ClientSize = new System.Drawing.Size(1119, 624);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnInbaocao);
             this.Controls.Add(this.btnLammoi);
             this.Name = "frmBaoCaoHTK";
-            this.Text = "frmBaoCaoHTK";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmBaoCaoHTK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
