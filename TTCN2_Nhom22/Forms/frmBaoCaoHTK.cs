@@ -123,7 +123,7 @@ namespace TTCN2_Nhom22.Forms
             exRange.Range["A2:B2"].Value = "Hà Đông - Hà nội";
             exRange.Range["A3:B3"].MergeCells = true;
             exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
-            exRange.Range["A3:B3"].Value = "Điện thoại: 0982013648";
+            exRange.Range["A3:B3"].Value = "0969385885 - 0865889258";
             exRange.Range["C2:D2"].Font.Size = 15;
             exRange.Range["C2:D2"].Font.Name = "Times new roman";
             exRange.Range["C2:D2"].Font.Bold = true;

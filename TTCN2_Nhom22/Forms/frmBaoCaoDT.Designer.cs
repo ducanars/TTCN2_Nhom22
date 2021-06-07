@@ -248,6 +248,7 @@ namespace TTCN2_Nhom22.Forms
             this.btnInbaocao.TabIndex = 146;
             this.btnInbaocao.Text = "   In báo cáo";
             this.btnInbaocao.UseVisualStyleBackColor = true;
+            this.btnInbaocao.Click += new System.EventHandler(this.btnInbaocao_Click);
             // 
             // btnLamlai
             // 

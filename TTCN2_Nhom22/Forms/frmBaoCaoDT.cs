@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMExcel = Microsoft.Office.Interop.Excel;
 
 namespace TTCN2_Nhom22.Forms
 {
@@ -171,6 +174,85 @@ namespace TTCN2_Nhom22.Forms
             }
             txtDoanhThu.Text = Convert.ToString(sum);
             lblDoanhthu.Text = "Bằng chữ: " + ThucthiSQL.ChuyenSoSangChu(txtDoanhThu.Text.ToString());
+        }
+
+        private void btnInbaocao_Click(object sender, EventArgs e)
+        {
+            COMExcel.Application exApp = new COMExcel.Application();
+            COMExcel.Workbook exBook;
+            COMExcel.Worksheet exSheet;
+            COMExcel.Range exRange;
+            int hang = 0, cot = 0;
+            exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
+            exSheet = exBook.Worksheets[1];
+            // định dạng chung
+            exRange = exSheet.Cells[1, 1];
+            exRange.Range["A1:B3"].Font.Size = 10;
+            exRange.Range["A1:B3"].Font.Name = "Times new roman";
+            exRange.Range["A1:B3"].Font.Bold = true;
+            exRange.Range["A1:B3"].Font.ColorIndex = 5; //Xanh da trời
+            exRange.Range["A1:A1"].ColumnWidth = 7;
+            exRange.Range["B1:B1"].ColumnWidth = 25;
+            exRange.Range["A1:B1"].MergeCells = true;
+            exRange.Range["A1:B1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A1:B1"].Value = "VIVU Group";
+            exRange.Range["A2:B2"].MergeCells = true;
+            exRange.Range["A2:B2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A2:B2"].Value = "Hà Đông - Hà nội";
+            exRange.Range["A3:B3"].MergeCells = true;
+            exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A3:B3"].Value = "0969385885 - 0865889258";
+            exRange.Range["C2:E2"].Font.Size = 16;
+            exRange.Range["C2:E2"].Font.Name = "Times new roman";
+            exRange.Range["C2:E2"].Font.Bold = true;
+            exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
+            exRange.Range["C2:E2"].MergeCells = true;
+            exRange.Range["C2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C2:E2"].Value = "BÁO CÁO DOANH THU";
+
+
+            //Tạo dòng tiêu đề
+            exRange.Range["A5:F5"].Font.Bold = true;
+            exRange.Range["A5:F5"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C5:F5"].ColumnWidth = 15;
+            exRange.Range["E5:E5"].ColumnWidth = 18;
+            exRange.Range["A5:A5"].Value = "STT";
+            exRange.Range["B5:B5"].Value = "Mã hoá đơn";
+            exRange.Range["C5:C5"].Value = "Mã nhân viên";
+            exRange.Range["D5:D5"].Value = "Mã Khách hàng";
+            exRange.Range["E5:E5"].Value = "Ngày bán";
+            exRange.Range["F5:F5"].Value = "Tổng tiền";
+            for (hang = 0; hang <= dataGridView1.Rows.Count - 1; hang++)
+            {
+                //điền stt vào cột 1 dòng 12
+                exSheet.Cells[1][hang + 6] = hang + 1;
+                for (cot = 0; cot <= dataGridView1.Columns.Count - 1; cot++)
+                    //điền thông tin từ cột t2 dòng 12
+                    exSheet.Cells[cot + 2][hang + 6] = dataGridView1.Rows[hang].Cells[cot].Value.ToString();
+            }
+            exRange = exSheet.Cells[cot][hang + 8];
+            exRange.Font.Bold = true;
+            exRange.Value2 = "Doanh thu: ";
+            exRange = exSheet.Cells[cot + 1][hang + 8];
+            exRange.Font.Bold = true;
+            exRange.Value2 = txtDoanhThu.Text;
+            exRange = exSheet.Cells[1][hang + 9];//ô A1
+            exRange.Range["A1:F1"].MergeCells = true;
+            exRange.Range["A1:F1"].Font.Bold = true;
+            exRange.Range["A1:F1"].Font.Italic = true;
+            exRange.Range["A1:F1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignRight;
+            exRange.Range["A1:F1"].Value = "Bằng chữ: " + ThucthiSQL.ChuyenSoSangChu(txtDoanhThu.Text);
+
+            DateTime d = DateTime.Now;
+            exRange = exSheet.Cells[1][hang + 11];
+            exRange.Range["D1:E1"].MergeCells = true;
+            exRange.Range["D1:E1"].Font.Bold = true;
+            exRange.Range["D1:E1"].Value = "Hà nội, Ngày " + d.Day + " Tháng " + d.Month + " Năm " + d.Year;
+            exRange.Range["D2:E2"].MergeCells = true;
+            exRange.Range["D2:E2"].Value = "Nhân viên lập báo cáo";
+            exRange.Range["D2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exSheet.Name = "Báo cáo doanh thu";
+            exApp.Visible = true;
         }
     }
 }
