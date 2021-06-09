@@ -586,6 +586,8 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.btnThemhoadon);
             this.Controls.Add(this.grbCTHD);
             this.Controls.Add(this.grbTTHD);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmHDNhap";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmHDNhap_Load);

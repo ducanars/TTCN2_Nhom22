@@ -588,7 +588,8 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.grbTTHD);
             this.Controls.Add(this.grbCTHD);
             this.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmHDXuat";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmHDXuat_Load);

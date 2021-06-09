@@ -329,6 +329,8 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmNhaCC";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmNhaCC_Load);

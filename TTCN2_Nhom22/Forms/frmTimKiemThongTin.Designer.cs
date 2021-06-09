@@ -158,6 +158,8 @@ namespace TTCN2_Nhom22.Forms
             this.ClientSize = new System.Drawing.Size(991, 611);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmTimKiemThongTin";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmTimKiemThongTin_Load);
