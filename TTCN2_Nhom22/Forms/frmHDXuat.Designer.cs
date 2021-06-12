@@ -42,7 +42,6 @@ namespace TTCN2_Nhom22.Forms
             this.btnLuuhoadon = new System.Windows.Forms.Button();
             this.btnThemhoadon = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtDongiaban = new System.Windows.Forms.TextBox();
             this.cmbMaSP = new System.Windows.Forms.ComboBox();
@@ -50,6 +49,7 @@ namespace TTCN2_Nhom22.Forms
             this.cmbTenKH = new System.Windows.Forms.ComboBox();
             this.cmbMaKH = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbTenNV = new System.Windows.Forms.ComboBox();
             this.cmbMaNV = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgayxuat = new System.Windows.Forms.DateTimePicker();
@@ -62,7 +62,6 @@ namespace TTCN2_Nhom22.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.grbCTHD = new System.Windows.Forms.GroupBox();
             this.txtTongtien = new System.Windows.Forms.TextBox();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.lblBangchu = new System.Windows.Forms.Label();
             this.txtSoluong = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -72,6 +71,8 @@ namespace TTCN2_Nhom22.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtSoluongcon = new System.Windows.Forms.TextBox();
+            this.cmbTenSP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grbTTHD.SuspendLayout();
             this.grbCTHD.SuspendLayout();
@@ -220,15 +221,6 @@ namespace TTCN2_Nhom22.Forms
             this.txtEmail.Size = new System.Drawing.Size(278, 30);
             this.txtEmail.TabIndex = 115;
             // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenNV.Location = new System.Drawing.Point(219, 178);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenNV.Size = new System.Drawing.Size(278, 30);
-            this.txtTenNV.TabIndex = 115;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -267,6 +259,7 @@ namespace TTCN2_Nhom22.Forms
             this.grbTTHD.Controls.Add(this.cmbTenKH);
             this.grbTTHD.Controls.Add(this.cmbMaKH);
             this.grbTTHD.Controls.Add(this.label1);
+            this.grbTTHD.Controls.Add(this.cmbTenNV);
             this.grbTTHD.Controls.Add(this.cmbMaNV);
             this.grbTTHD.Controls.Add(this.label4);
             this.grbTTHD.Controls.Add(this.dtpNgayxuat);
@@ -275,7 +268,6 @@ namespace TTCN2_Nhom22.Forms
             this.grbTTHD.Controls.Add(this.label13);
             this.grbTTHD.Controls.Add(this.txtSDT);
             this.grbTTHD.Controls.Add(this.label3);
-            this.grbTTHD.Controls.Add(this.txtTenNV);
             this.grbTTHD.Controls.Add(this.label5);
             this.grbTTHD.Controls.Add(this.label14);
             this.grbTTHD.Controls.Add(this.txtDiachi);
@@ -323,6 +315,17 @@ namespace TTCN2_Nhom22.Forms
             this.label1.Size = new System.Drawing.Size(127, 22);
             this.label1.TabIndex = 128;
             this.label1.Text = "Mã khách hàng";
+            // 
+            // cmbTenNV
+            // 
+            this.cmbTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbTenNV.FormattingEnabled = true;
+            this.cmbTenNV.Location = new System.Drawing.Point(219, 179);
+            this.cmbTenNV.Name = "cmbTenNV";
+            this.cmbTenNV.Size = new System.Drawing.Size(278, 31);
+            this.cmbTenNV.TabIndex = 126;
+            this.cmbTenNV.DropDown += new System.EventHandler(this.cmbTenNV_DropDown);
+            this.cmbTenNV.TextChanged += new System.EventHandler(this.cmbTenNV_TextChanged);
             // 
             // cmbMaNV
             // 
@@ -434,7 +437,6 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.Controls.Add(this.dataGridView1);
             this.grbCTHD.Controls.Add(this.txtTongtien);
             this.grbCTHD.Controls.Add(this.txtThanhtien);
-            this.grbCTHD.Controls.Add(this.txtTenSP);
             this.grbCTHD.Controls.Add(this.txtGiamgia);
             this.grbCTHD.Controls.Add(this.txtDongiaban);
             this.grbCTHD.Controls.Add(this.lblBangchu);
@@ -445,6 +447,7 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.Controls.Add(this.label10);
             this.grbCTHD.Controls.Add(this.label9);
             this.grbCTHD.Controls.Add(this.label15);
+            this.grbCTHD.Controls.Add(this.cmbTenSP);
             this.grbCTHD.Controls.Add(this.cmbMaSP);
             this.grbCTHD.Controls.Add(this.label8);
             this.grbCTHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -464,15 +467,6 @@ namespace TTCN2_Nhom22.Forms
             this.txtTongtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTongtien.Size = new System.Drawing.Size(233, 30);
             this.txtTongtien.TabIndex = 133;
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenSP.Location = new System.Drawing.Point(567, 35);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenSP.Size = new System.Drawing.Size(233, 30);
-            this.txtTenSP.TabIndex = 133;
             // 
             // lblBangchu
             // 
@@ -573,6 +567,28 @@ namespace TTCN2_Nhom22.Forms
             this.label8.TabIndex = 132;
             this.label8.Text = "Mã sản phẩm";
             // 
+            // txtSoluongcon
+            // 
+            this.txtSoluongcon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoluongcon.Location = new System.Drawing.Point(938, 37);
+            this.txtSoluongcon.Name = "txtSoluongcon";
+            this.txtSoluongcon.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSoluongcon.Size = new System.Drawing.Size(73, 30);
+            this.txtSoluongcon.TabIndex = 133;
+            this.txtSoluongcon.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
+            this.txtSoluongcon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoluong_KeyPress);
+            // 
+            // cmbTenSP
+            // 
+            this.cmbTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbTenSP.FormattingEnabled = true;
+            this.cmbTenSP.Location = new System.Drawing.Point(567, 34);
+            this.cmbTenSP.Name = "cmbTenSP";
+            this.cmbTenSP.Size = new System.Drawing.Size(233, 31);
+            this.cmbTenSP.TabIndex = 133;
+            this.cmbTenSP.DropDown += new System.EventHandler(this.cmbTenSP_DropDown);
+            this.cmbTenSP.TextChanged += new System.EventHandler(this.cmbTenSP_TextChanged);
+            // 
             // frmHDXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -587,6 +603,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.btnThemhoadon);
             this.Controls.Add(this.grbTTHD);
             this.Controls.Add(this.grbCTHD);
+            this.Controls.Add(this.txtSoluongcon);
             this.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -600,6 +617,7 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.ResumeLayout(false);
             this.grbCTHD.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -617,7 +635,6 @@ namespace TTCN2_Nhom22.Forms
         private System.Windows.Forms.Button btnLuuhoadon;
         private System.Windows.Forms.Button btnThemhoadon;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtDongiaban;
         private System.Windows.Forms.ComboBox cmbMaSP;
@@ -641,11 +658,13 @@ namespace TTCN2_Nhom22.Forms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtTongtien;
         private System.Windows.Forms.Label lblBangchu;
         private System.Windows.Forms.ComboBox cmbTenKH;
+        private System.Windows.Forms.TextBox txtSoluongcon;
+        private System.Windows.Forms.ComboBox cmbTenNV;
+        private System.Windows.Forms.ComboBox cmbTenSP;
     }
 }

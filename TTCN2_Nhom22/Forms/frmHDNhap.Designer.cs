@@ -31,6 +31,7 @@ namespace TTCN2_Nhom22.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHDNhap));
             this.grbTTHD = new System.Windows.Forms.GroupBox();
+            this.cmbTenNV = new System.Windows.Forms.ComboBox();
             this.cmbTenNCC = new System.Windows.Forms.ComboBox();
             this.cmbMaNCC = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace TTCN2_Nhom22.Forms
             this.label13 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtDiachi = new System.Windows.Forms.TextBox();
@@ -54,7 +54,6 @@ namespace TTCN2_Nhom22.Forms
             this.lblBangchu = new System.Windows.Forms.Label();
             this.txtThanhtien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.txtGiamgia = new System.Windows.Forms.TextBox();
             this.txtDongianhap = new System.Windows.Forms.TextBox();
             this.txtSoluong = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@ namespace TTCN2_Nhom22.Forms
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnInhoadon = new System.Windows.Forms.Button();
+            this.cmbTenSP = new System.Windows.Forms.ComboBox();
             this.grbTTHD.SuspendLayout();
             this.grbCTHD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,6 +80,7 @@ namespace TTCN2_Nhom22.Forms
             // grbTTHD
             // 
             this.grbTTHD.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grbTTHD.Controls.Add(this.cmbTenNV);
             this.grbTTHD.Controls.Add(this.cmbTenNCC);
             this.grbTTHD.Controls.Add(this.cmbMaNCC);
             this.grbTTHD.Controls.Add(this.label1);
@@ -91,7 +92,6 @@ namespace TTCN2_Nhom22.Forms
             this.grbTTHD.Controls.Add(this.label13);
             this.grbTTHD.Controls.Add(this.txtSDT);
             this.grbTTHD.Controls.Add(this.label3);
-            this.grbTTHD.Controls.Add(this.txtTenNV);
             this.grbTTHD.Controls.Add(this.label5);
             this.grbTTHD.Controls.Add(this.label14);
             this.grbTTHD.Controls.Add(this.txtDiachi);
@@ -106,6 +106,17 @@ namespace TTCN2_Nhom22.Forms
             this.grbTTHD.TabIndex = 0;
             this.grbTTHD.TabStop = false;
             this.grbTTHD.Text = "Thông tin hóa đơn";
+            // 
+            // cmbTenNV
+            // 
+            this.cmbTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbTenNV.FormattingEnabled = true;
+            this.cmbTenNV.Location = new System.Drawing.Point(219, 178);
+            this.cmbTenNV.Name = "cmbTenNV";
+            this.cmbTenNV.Size = new System.Drawing.Size(278, 31);
+            this.cmbTenNV.TabIndex = 131;
+            this.cmbTenNV.DropDown += new System.EventHandler(this.cmbTenNV_DropDown);
+            this.cmbTenNV.TextChanged += new System.EventHandler(this.cmbTenNV_TextChanged);
             // 
             // cmbTenNCC
             // 
@@ -223,15 +234,6 @@ namespace TTCN2_Nhom22.Forms
             this.label3.TabIndex = 114;
             this.label3.Text = "Điện thoại";
             // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenNV.Location = new System.Drawing.Point(219, 178);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenNV.Size = new System.Drawing.Size(278, 30);
-            this.txtTenNV.TabIndex = 115;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -301,7 +303,6 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.Controls.Add(this.lblBangchu);
             this.grbCTHD.Controls.Add(this.txtThanhtien);
             this.grbCTHD.Controls.Add(this.label8);
-            this.grbCTHD.Controls.Add(this.txtTenSP);
             this.grbCTHD.Controls.Add(this.txtGiamgia);
             this.grbCTHD.Controls.Add(this.txtDongianhap);
             this.grbCTHD.Controls.Add(this.txtSoluong);
@@ -310,6 +311,7 @@ namespace TTCN2_Nhom22.Forms
             this.grbCTHD.Controls.Add(this.label17);
             this.grbCTHD.Controls.Add(this.label18);
             this.grbCTHD.Controls.Add(this.label19);
+            this.grbCTHD.Controls.Add(this.cmbTenSP);
             this.grbCTHD.Controls.Add(this.cmbMaSP);
             this.grbCTHD.Controls.Add(this.label20);
             this.grbCTHD.Controls.Add(this.btnThemSP);
@@ -362,15 +364,6 @@ namespace TTCN2_Nhom22.Forms
             this.label8.Size = new System.Drawing.Size(84, 22);
             this.label8.TabIndex = 140;
             this.label8.Text = "Tổng tiền";
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTenSP.Location = new System.Drawing.Point(567, 38);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenSP.Size = new System.Drawing.Size(233, 30);
-            this.txtTenSP.TabIndex = 143;
             // 
             // txtGiamgia
             // 
@@ -573,6 +566,17 @@ namespace TTCN2_Nhom22.Forms
             this.btnInhoadon.UseVisualStyleBackColor = true;
             this.btnInhoadon.Click += new System.EventHandler(this.btnInhoadon_Click);
             // 
+            // cmbTenSP
+            // 
+            this.cmbTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbTenSP.FormattingEnabled = true;
+            this.cmbTenSP.Location = new System.Drawing.Point(567, 38);
+            this.cmbTenSP.Name = "cmbTenSP";
+            this.cmbTenSP.Size = new System.Drawing.Size(233, 31);
+            this.cmbTenSP.TabIndex = 147;
+            this.cmbTenSP.DropDown += new System.EventHandler(this.cmbTenSP_DropDown);
+            this.cmbTenSP.TextChanged += new System.EventHandler(this.cmbTenSP_TextChanged);
+            // 
             // frmHDNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -626,11 +630,9 @@ namespace TTCN2_Nhom22.Forms
         private System.Windows.Forms.Button btnThemSP;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtThanhtien;
-        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.TextBox txtGiamgia;
         private System.Windows.Forms.TextBox txtDongianhap;
         private System.Windows.Forms.TextBox txtSoluong;
@@ -645,5 +647,7 @@ namespace TTCN2_Nhom22.Forms
         private System.Windows.Forms.Label lblBangchu;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbTenNCC;
+        private System.Windows.Forms.ComboBox cmbTenNV;
+        private System.Windows.Forms.ComboBox cmbTenSP;
     }
 }

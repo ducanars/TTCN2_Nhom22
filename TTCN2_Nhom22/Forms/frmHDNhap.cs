@@ -26,7 +26,6 @@ namespace TTCN2_Nhom22.Forms
             btnInhoadon.Enabled = false;
             grbTTHD.Enabled = false;
             grbCTHD.Enabled = false;
-            txtTenNV.ReadOnly = true;
             txtDiachi.ReadOnly = true;
             txtSDT.ReadOnly = true;
             txtThanhtien.ReadOnly = true;
@@ -43,7 +42,7 @@ namespace TTCN2_Nhom22.Forms
 
         private void cmbMaNV_DropDown(object sender, EventArgs e)
         {
-            cmbMaNV.DataSource = ThucthiSQL.DocBang("SELECT MaNV FROM tblNhanVien");
+            cmbMaNV.DataSource = ThucthiSQL.DocBang("SELECT MaNV FROM tblNhanVien WHERE MaCV=N'CV01' or MaCV=N'CV02'");
             cmbMaNV.ValueMember = "MaNV";
             cmbMaNV.SelectedIndex = -1;
         }
@@ -57,7 +56,7 @@ namespace TTCN2_Nhom22.Forms
 
         private void cmbMaSP_DropDown(object sender, EventArgs e)
         {
-            cmbMaSP.DataSource = ThucthiSQL.DocBang("SELECT MaSP FROM tblSanPham");
+            cmbMaSP.DataSource = ThucthiSQL.DocBang("SELECT MaSP FROM tblSanPham WHERE MaNCC=N'" + cmbMaNCC.Text + "'");
             cmbMaSP.ValueMember = "MaSP";
             cmbMaSP.SelectedIndex = -1;
         }
@@ -77,12 +76,10 @@ namespace TTCN2_Nhom22.Forms
             txtMaHDNhap.Text = "";
             dtpNgaynhap.Text = DateTime.Now.ToShortDateString();
             cmbMaNV.Text = "";
-            txtTenNV.Text = "";
             cmbMaNCC.Text = "";
             txtSDT.Text = "";
             txtDiachi.Text = "";
             cmbMaSP.Text = "";
-            txtTenSP.Text = "";
             txtSoluong.Text = "0";
             txtGiamgia.Text = "0";
             txtThanhtien.Text = "0";
@@ -94,13 +91,13 @@ namespace TTCN2_Nhom22.Forms
         {
             if (cmbMaNV.Text == "")
             {
-                txtTenNV.Text = "";
+                cmbTenNV.Text = "";
                 return;
             }
             string sql = "SELECT TenNV FROM tblNhanVien WHERE MaNV = N'" + cmbMaNV.Text + "'";
             DataTable tbl = ThucthiSQL.DocBang(sql);
             if (tbl.Rows.Count > 0)
-                txtTenNV.Text = tbl.Rows[0][0].ToString();
+                cmbTenNV.Text = tbl.Rows[0][0].ToString();
         }
 
         private void cmbMaNCC_TextChanged(object sender, EventArgs e)
@@ -128,7 +125,7 @@ namespace TTCN2_Nhom22.Forms
         {
             if (cmbMaSP.Text == "")
             {
-                txtTenSP.Text = "";
+                cmbTenSP.Text = "";
                 txtSoluong.Text = "0";
                 return;
             }
@@ -136,7 +133,7 @@ namespace TTCN2_Nhom22.Forms
             DataTable tbl = ThucthiSQL.DocBang(sql);
             if (tbl.Rows.Count > 0)
             {
-                txtTenSP.Text = tbl.Rows[0][0].ToString();
+                cmbTenSP.Text = tbl.Rows[0][0].ToString();
                 txtDongianhap.Text = (Convert.ToInt32(tbl.Rows[0][1])).ToString();
             }
         }
@@ -271,6 +268,7 @@ namespace TTCN2_Nhom22.Forms
             txtTongtien.Enabled = false;
             txtDongianhap.Enabled = false;
             grbCTHD.Enabled = true;
+            grbTTHD.Enabled = false;
         }
 
         private void txtSoluong_KeyPress(object sender, KeyPressEventArgs e)
@@ -540,6 +538,41 @@ namespace TTCN2_Nhom22.Forms
             exRange.Range["A6:C6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exSheet.Name = "Hóa đơn nhập";
             exApp.Visible = true;
+        }
+
+        private void cmbTenNV_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT MaNV FROM tblNhanVien WHERE TenNV = N'" + cmbTenNV.Text + "'";
+            DataTable tbl = ThucthiSQL.DocBang(sql);
+            if (tbl.Rows.Count > 0)
+            {
+                cmbMaNV.Text = tbl.Rows[0][0].ToString();
+            }
+        }
+
+        private void cmbTenNV_DropDown(object sender, EventArgs e)
+        {
+            cmbTenNV.DataSource = ThucthiSQL.DocBang("SELECT TenNV FROM tblNhanVien WHERE MaCV=N'CV01' or MaCV=N'CV02'");
+            cmbTenNV.ValueMember = "TenNV";
+            cmbTenNV.SelectedIndex = -1;
+        }
+
+        private void cmbTenSP_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "SELECT MaSP, Dongiaban FROM tblSanPham WHERE TenSP = N'" + cmbTenSP.Text + "'";
+            DataTable tbl = ThucthiSQL.DocBang(sql);
+            if (tbl.Rows.Count > 0)
+            {
+                cmbMaSP.Text = tbl.Rows[0][0].ToString();
+                txtDongianhap.Text = tbl.Rows[0][1].ToString();
+            }
+        }
+
+        private void cmbTenSP_DropDown(object sender, EventArgs e)
+        {
+            cmbTenSP.DataSource = ThucthiSQL.DocBang("SELECT TenSP FROM tblSanPham");
+            cmbTenSP.ValueMember = "TenSP";
+            cmbTenSP.SelectedIndex = -1;
         }
     }
 }
