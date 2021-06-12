@@ -29,7 +29,7 @@ namespace TTCN2_Nhom22
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.chkShow = new System.Windows.Forms.CheckBox();
@@ -41,32 +41,15 @@ namespace TTCN2_Nhom22
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Controls.Add(this.chkShow);
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Controls.Add(this.lblIncorrect);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(359, 105);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(417, 342);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(243, 278);
+            this.btnClose.Location = new System.Drawing.Point(617, 378);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(108, 42);
             this.btnClose.TabIndex = 4;
@@ -78,7 +61,7 @@ namespace TTCN2_Nhom22
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(76, 278);
+            this.btnLogin.Location = new System.Drawing.Point(450, 378);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 42);
             this.btnLogin.TabIndex = 4;
@@ -89,19 +72,20 @@ namespace TTCN2_Nhom22
             // chkShow
             // 
             this.chkShow.AutoSize = true;
+            this.chkShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.chkShow.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkShow.Location = new System.Drawing.Point(139, 201);
+            this.chkShow.Location = new System.Drawing.Point(513, 301);
             this.chkShow.Name = "chkShow";
             this.chkShow.Size = new System.Drawing.Size(151, 27);
             this.chkShow.TabIndex = 3;
             this.chkShow.Text = "Show Password";
-            this.chkShow.UseVisualStyleBackColor = true;
+            this.chkShow.UseVisualStyleBackColor = false;
             this.chkShow.CheckedChanged += new System.EventHandler(this.chkShow_CheckedChanged);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(139, 151);
+            this.txtPassword.Location = new System.Drawing.Point(513, 251);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(244, 30);
             this.txtPassword.TabIndex = 2;
@@ -110,7 +94,7 @@ namespace TTCN2_Nhom22
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.Location = new System.Drawing.Point(139, 96);
+            this.txtUsername.Location = new System.Drawing.Point(513, 196);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(244, 30);
             this.txtUsername.TabIndex = 2;
@@ -118,9 +102,10 @@ namespace TTCN2_Nhom22
             // lblIncorrect
             // 
             this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblIncorrect.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(53, 237);
+            this.lblIncorrect.Location = new System.Drawing.Point(409, 337);
             this.lblIncorrect.Name = "lblIncorrect";
             this.lblIncorrect.Size = new System.Drawing.Size(0, 23);
             this.lblIncorrect.TabIndex = 1;
@@ -128,8 +113,9 @@ namespace TTCN2_Nhom22
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(18, 154);
+            this.label5.Location = new System.Drawing.Point(392, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 1;
@@ -138,8 +124,9 @@ namespace TTCN2_Nhom22
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(18, 99);
+            this.label4.Location = new System.Drawing.Point(392, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 23);
             this.label4.TabIndex = 1;
@@ -148,9 +135,9 @@ namespace TTCN2_Nhom22
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(97, 32);
+            this.label3.Location = new System.Drawing.Point(456, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(236, 28);
             this.label3.TabIndex = 0;
@@ -178,6 +165,15 @@ namespace TTCN2_Nhom22
             this.label2.TabIndex = 0;
             this.label2.Text = "QUẢN LÝ NHẬP XUẤT";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Location = new System.Drawing.Point(368, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(417, 342);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -185,25 +181,32 @@ namespace TTCN2_Nhom22
             this.BackgroundImage = global::TTCN2_Nhom22.Properties.Resources.Capture;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 473);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.chkShow);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblIncorrect);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";
-            this.Text = "frmDangNhap";
+            this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.CheckBox chkShow;
@@ -215,5 +218,6 @@ namespace TTCN2_Nhom22
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblIncorrect;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

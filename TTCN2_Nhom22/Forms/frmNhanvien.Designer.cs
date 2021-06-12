@@ -435,6 +435,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "frmNhanVien";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";

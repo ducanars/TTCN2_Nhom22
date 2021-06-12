@@ -29,6 +29,7 @@ namespace TTCN2_Nhom22.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoHTK));
             this.btnDong = new System.Windows.Forms.Button();
             this.btnInbaocao = new System.Windows.Forms.Button();
             this.btnLammoi = new System.Windows.Forms.Button();
@@ -260,6 +261,7 @@ namespace TTCN2_Nhom22.Forms
             this.Controls.Add(this.btnInbaocao);
             this.Controls.Add(this.btnLammoi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmBaoCaoHTK";
             this.Text = "Chương trình quản lý Công ty Cổ phần VIVU Group Việt Nam";

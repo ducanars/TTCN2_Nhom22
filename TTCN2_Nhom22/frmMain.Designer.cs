@@ -47,6 +47,9 @@ namespace TTCN2_Nhom22
             this.báoCáoHàngTồnKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuNhậpKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuXuấtKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +63,8 @@ namespace TTCN2_Nhom22
             this.hóaĐơnToolStripMenuItem,
             this.tìmKiếmToolStripMenuItem,
             this.báoCáoToolStripMenuItem,
-            this.thoátToolStripMenuItem});
+            this.thoátToolStripMenuItem,
+            this.thoátToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1169, 33);
@@ -202,11 +206,37 @@ namespace TTCN2_Nhom22
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.thoátToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.Actions_window_close_icon;
+            this.thoátToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phiếuNhậpKhoToolStripMenuItem,
+            this.phiếuXuấtKhoToolStripMenuItem});
+            this.thoátToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.images1;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
-            this.thoátToolStripMenuItem.Text = "Thoát";
-            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
+            this.thoátToolStripMenuItem.Text = "Kho";
+            // 
+            // phiếuNhậpKhoToolStripMenuItem
+            // 
+            this.phiếuNhậpKhoToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.Reports_icon;
+            this.phiếuNhậpKhoToolStripMenuItem.Name = "phiếuNhậpKhoToolStripMenuItem";
+            this.phiếuNhậpKhoToolStripMenuItem.Size = new System.Drawing.Size(255, 30);
+            this.phiếuNhậpKhoToolStripMenuItem.Text = "Phiếu nhập kho";
+            this.phiếuNhậpKhoToolStripMenuItem.Click += new System.EventHandler(this.phiếuNhậpKhoToolStripMenuItem_Click);
+            // 
+            // phiếuXuấtKhoToolStripMenuItem
+            // 
+            this.phiếuXuấtKhoToolStripMenuItem.Image = global::TTCN2_Nhom22.Properties.Resources.Sales_by_payment_method_icon;
+            this.phiếuXuấtKhoToolStripMenuItem.Name = "phiếuXuấtKhoToolStripMenuItem";
+            this.phiếuXuấtKhoToolStripMenuItem.Size = new System.Drawing.Size(255, 30);
+            this.phiếuXuấtKhoToolStripMenuItem.Text = "Phiếu xuất kho";
+            this.phiếuXuấtKhoToolStripMenuItem.Click += new System.EventHandler(this.phiếuXuấtKhoToolStripMenuItem_Click);
+            // 
+            // thoátToolStripMenuItem1
+            // 
+            this.thoátToolStripMenuItem1.Image = global::TTCN2_Nhom22.Properties.Resources.Actions_window_close_icon;
+            this.thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
+            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(106, 29);
+            this.thoátToolStripMenuItem1.Text = "Thoát";
+            this.thoátToolStripMenuItem1.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
             // frmMain
             // 
@@ -218,6 +248,7 @@ namespace TTCN2_Nhom22
             this.ClientSize = new System.Drawing.Size(1169, 694);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -249,5 +280,8 @@ namespace TTCN2_Nhom22
         private System.Windows.Forms.ToolStripMenuItem báoCáoHàngTồnKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem phiếuNhậpKhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuXuấtKhoToolStripMenuItem;
     }
 }

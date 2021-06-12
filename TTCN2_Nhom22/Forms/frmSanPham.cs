@@ -91,6 +91,7 @@ namespace TTCN2_Nhom22.Forms
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            double gt1, gt2, ss;
             if (txtMaSP.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -147,7 +148,17 @@ namespace TTCN2_Nhom22.Forms
                 txtMaSP.Focus();
                 ThucthiSQL.CloseConnection();
                 return;
-            }            
+            }
+            gt1 = Convert.ToDouble(txtDongianhap.Text);
+            gt2 = Convert.ToDouble(txtDongiaban.Text);
+            ss = gt1 - gt2;
+
+            if (ss >= 0)
+            {
+                MessageBox.Show("Đơn giá bán phải lớn hơn đơn giá nhập, mời nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDongiaban.Focus();
+                return;
+            }
             else
             {
                 sql = "insert into  tblSanPham (MaSP, TenSP, Soluong, DVT, Dongianhap,Dongiaban, Mota, MaNCC)" +

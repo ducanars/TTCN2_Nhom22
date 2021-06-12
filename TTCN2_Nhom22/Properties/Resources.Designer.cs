@@ -263,6 +263,16 @@ namespace TTCN2_Nhom22.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images1 {
+            get {
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap invoice_icon {
             get {
                 object obj = ResourceManager.GetObject("invoice-icon", resourceCulture);
@@ -326,6 +336,26 @@ namespace TTCN2_Nhom22.Properties {
         internal static System.Drawing.Bitmap Recycle_Bin_Full_icon {
             get {
                 object obj = ResourceManager.GetObject("Recycle-Bin-Full-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reports_icon {
+            get {
+                object obj = ResourceManager.GetObject("Reports-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sales_by_payment_method_icon {
+            get {
+                object obj = ResourceManager.GetObject("Sales-by-payment-method-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

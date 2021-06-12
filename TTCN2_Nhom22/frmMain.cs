@@ -14,13 +14,6 @@ namespace TTCN2_Nhom22
         {
             InitializeComponent();
         }
-
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình không?", "Hỏi Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
-        }
-
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Forms.frmNhaCC f = new Forms.frmNhaCC();
@@ -94,6 +87,26 @@ namespace TTCN2_Nhom22
         private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Forms.frmBaoCaoDT f = new Forms.frmBaoCaoDT();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình không?", "Hỏi Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void phiếuNhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.frmPNK f = new Forms.frmPNK();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+        }
+
+        private void phiếuXuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.frmPXK f = new Forms.frmPXK();
             f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
