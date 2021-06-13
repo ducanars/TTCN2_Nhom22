@@ -228,9 +228,18 @@ namespace TTCN2_Nhom22.Forms
 
         private void cmbMaNV_DropDown(object sender, EventArgs e)
         {
-            cmbMaNV.DataSource = ThucthiSQL.DocBang("SELECT MaNV FROM tblNhanVien");
-            cmbMaNV.ValueMember = "MaNV";
-            cmbMaNV.SelectedIndex = -1;
+            if (rdoHDN.Checked == true)
+            {
+                cmbMaNV.DataSource = ThucthiSQL.DocBang("SELECT MaNV FROM tblNhanVien WHERE MaCV=N'CV01' or MaCV=N'CV02'");
+                cmbMaNV.ValueMember = "MaNV";
+                cmbMaNV.SelectedIndex = -1;
+            }
+            else if (rdoHDX.Checked == true)
+            {
+                cmbMaNV.DataSource = ThucthiSQL.DocBang("SELECT MaNV FROM tblNhanVien WHERE MaCV=N'CV03'");
+                cmbMaNV.ValueMember = "MaNV";
+                cmbMaNV.SelectedIndex = -1;
+            }    
         }
 
         private void cmbMaNV_TextChanged(object sender, EventArgs e)

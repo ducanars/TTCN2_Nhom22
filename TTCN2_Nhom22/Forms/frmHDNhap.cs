@@ -220,19 +220,21 @@ namespace TTCN2_Nhom22.Forms
         private void Hienthi_Luoi()
         {
             string sql;
-            sql = "Select MaSP,Soluong,Dongianhap,Giamgia,Thanhtien from tblChiTietHDNhap where MaHDNhap=N'" +
+            sql = "Select b.MaSP,a.TenSP,b.Soluong,b.Dongianhap,b.Giamgia,b.Thanhtien from tblSanPham as a join tblChiTietHDNhap as b on a.MaSP=b.MaSP where MaHDNhap=N'" +
                 txtMaHDNhap.Text + "'";
             dataGridView1.DataSource = ThucthiSQL.DocBang(sql);
             dataGridView1.Columns[0].HeaderText = "Mã hàng";
-            dataGridView1.Columns[1].HeaderText = "Số lượng";
-            dataGridView1.Columns[2].HeaderText = "Giá nhập";
-            dataGridView1.Columns[3].HeaderText = "Giảm giá";
-            dataGridView1.Columns[4].HeaderText = "Thành tiền";
+            dataGridView1.Columns[1].HeaderText = "Tên hàng";
+            dataGridView1.Columns[2].HeaderText = "Số lượng";
+            dataGridView1.Columns[3].HeaderText = "Giá nhập";
+            dataGridView1.Columns[4].HeaderText = "Giảm giá";
+            dataGridView1.Columns[5].HeaderText = "Thành tiền";
             dataGridView1.Columns[0].Width = 150;
-            dataGridView1.Columns[1].Width = 150;
+            dataGridView1.Columns[1].Width = 300;
             dataGridView1.Columns[2].Width = 150;
             dataGridView1.Columns[3].Width = 150;
-            dataGridView1.Columns[4].Width = 200;
+            dataGridView1.Columns[4].Width = 150;
+            dataGridView1.Columns[5].Width = 200;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
@@ -570,7 +572,7 @@ namespace TTCN2_Nhom22.Forms
 
         private void cmbTenSP_DropDown(object sender, EventArgs e)
         {
-            cmbTenSP.DataSource = ThucthiSQL.DocBang("SELECT TenSP FROM tblSanPham");
+            cmbTenSP.DataSource = ThucthiSQL.DocBang("SELECT TenSP FROM tblSanPham WHERE MaNCC=N'" + cmbMaNCC.Text + "'");
             cmbTenSP.ValueMember = "TenSP";
             cmbTenSP.SelectedIndex = -1;
         }
